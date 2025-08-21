@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equity Ownership Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Equity Ownership Calculator</h1>
+            <p>Calculate ownership percentage and basis points from stock options</p>
+        </header>
+        
+        <main>
+            <form id="calculatorForm" class="calculator-form">
+                <div class="input-group">
+                    <label for="options">Number of Options:</label>
+                    <input type="number" id="options" name="options" min="0" step="1" required>
+                    <small>Enter the number of stock options you hold</small>
+                </div>
+                
+                <div class="input-group">
+                    <label for="sharesAuthorized">Shares Authorized:</label>
+                    <input type="number" id="sharesAuthorized" name="sharesAuthorized" min="1" step="1" required>
+                    <small>Total number of shares the company is authorized to issue</small>
+                </div>
+                
+                <div class="input-group">
+                    <label for="sharesOutstanding">Shares Outstanding:</label>
+                    <input type="number" id="sharesOutstanding" name="sharesOutstanding" min="1" step="1" required>
+                    <small>Number of shares currently issued and outstanding</small>
+                </div>
+                
+                <button type="submit" class="calculate-btn">Calculate Ownership</button>
+            </form>
+            
+            <div id="results" class="results" style="display: none;">
+                <h2>Ownership Results</h2>
+                <div class="result-item">
+                    <span class="result-label">Ownership Percentage:</span>
+                    <span id="ownershipPercent" class="result-value"></span>
+                </div>
+                <div class="result-item">
+                    <span class="result-label">Basis Points:</span>
+                    <span id="basisPoints" class="result-value"></span>
+                </div>
+                <div class="result-item">
+                    <span class="result-label">Fully Diluted Ownership:</span>
+                    <span id="fullyDilutedPercent" class="result-value"></span>
+                </div>
+                <div class="result-item">
+                    <span class="result-label">Fully Diluted Basis Points:</span>
+                    <span id="fullyDilutedBasisPoints" class="result-value"></span>
+                </div>
+            </div>
+            
+            <div class="info-section">
+                <h3>How it works</h3>
+                <ul>
+                    <li><strong>Ownership Percentage:</strong> Your options ÷ Shares Outstanding × 100</li>
+                    <li><strong>Basis Points:</strong> Ownership Percentage × 100 (1% = 100 basis points)</li>
+                    <li><strong>Fully Diluted:</strong> Calculated using Shares Authorized instead of Outstanding</li>
+                </ul>
+            </div>
+        </main>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
