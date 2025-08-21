@@ -62,6 +62,31 @@ Your ownership would be:
 3. Start a local server: `python3 -m http.server 8000`
 4. Navigate to `http://localhost:8000`
 
+## Deploy to Vercel
+
+This calculator can be easily deployed to Vercel for free hosting:
+
+### Method 1: GitHub Integration (Recommended)
+1. Fork or import this repository to your GitHub account
+2. Visit [vercel.com](https://vercel.com) and sign up/login
+3. Click "New Project" and import your GitHub repository
+4. Vercel will automatically detect it as a static site
+5. Click "Deploy" - your site will be live in seconds!
+6. Future pushes to your repository will automatically deploy
+
+### Method 2: Vercel CLI
+1. Install Vercel CLI: `npm install -g vercel`
+2. Login: `vercel login`
+3. In the project directory, run: `vercel --prod`
+4. Follow the prompts to deploy
+
+### Method 3: Drag and Drop
+1. Visit [vercel.com/new](https://vercel.com/new)
+2. Drag and drop your project folder
+3. Your site will be deployed instantly
+
+**Note**: No build configuration needed - this is a static HTML/CSS/JS site that works out of the box on Vercel.
+
 ## Browser Compatibility
 
 This calculator works in all modern browsers including:
